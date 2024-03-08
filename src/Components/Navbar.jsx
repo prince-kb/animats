@@ -1,5 +1,5 @@
 import React from 'react'
-import image from "./images/crown.png";
+import image from '../imgss/crown.png';
 function Navbar() {
   return (
     <div className='w-full px-20 py-8 flex justify-between items-center fixed bg-zinc-800 z-[10]'>

@@ -6,6 +6,7 @@ import Screen2 from './Components/Screen2'
 import Eye from './Components/Eye'
 
 import LocomotiveScroll from 'locomotive-scroll';
+import Screen3 from './Components/Screen3'
 function App() {
 
 const locomotiveScroll = new LocomotiveScroll();
@@ -17,6 +18,7 @@ const locomotiveScroll = new LocomotiveScroll();
       <SlidingText/>
       <Screen2/>
       <Eye/>
+      <Screen3/>
     </div>
   )
 }

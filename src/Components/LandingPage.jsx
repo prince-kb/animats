@@ -1,5 +1,5 @@
 import React from 'react'
-import image from "./images/crown.png";
+import image from '../imgss/crown.png';
 import { motion } from 'framer-motion';
 
 function LandingPage() {
