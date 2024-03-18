@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "framer": "^2.4.1",
-    "framer-motion": "^11.0.8",
+    "framer-motion": "^11.0.14",
     "locomotive-scroll": "^5.0.0-beta.11",
     "motion": "^10.17.0",
     "react": "^18.2.0",
