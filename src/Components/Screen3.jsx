@@ -27,6 +27,8 @@ function Screen3() {
                 </div>
             </motion.div>
         </div>
+
+        
         <div className='px-6 pl-3 w-1/2 h-full'>
             <motion.div onHoverStart={()=>{showAnimIn(1)}} onHoverEnd={()=>{showAnimOut(1)}} className='flex justify-center items-center w-full h-full overflow-hidden bg-slate-500 rounded-3xl' >
                 <img src={bg2}  alt="nothing" className='h-full'/>
