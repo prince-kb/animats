@@ -1,6 +1,6 @@
 import React from 'react'
-import bg1 from '../imgss/bg1.png';
-import bg2 from '../imgss/bg2.jpg'
+import bg1 from '../assets/images/bg1.png';
+import bg2 from '../assets/images/bg2.jpg';
 import {motion,useAnimation } from 'framer-motion';
 
 function Screen3() {
