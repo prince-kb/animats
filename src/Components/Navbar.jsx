@@ -9,7 +9,7 @@ function Navbar() {
   return (
     <div className='w-full px-[1vw] py-[2vh] flex justify-between items-center fixed z-[10] font-[arial]'>
         <div className="logo">
-            <img src={image} alt="Nothing" className=' h-24 w-auto m-[2vh]'/>
+            <img src={image} alt="Nothing" className={` ${type === 'desktop' ? 'h-24' : 'h-16 '} w-auto m-[2vh]`}/>
         </div>
         <div className="links flex gap-[3vw] mr-1">
             {["Home","About","Services","Contact"].map((item,index)=>(
