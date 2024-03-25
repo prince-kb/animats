@@ -8,19 +8,25 @@ import Eye from './Components/Eye'
 import LocomotiveScroll from 'locomotive-scroll';
 import Screen3 from './Components/Screen3'
 import './Components/BG/style.css'
-
+import { motion,  useScroll} from 'framer-motion'
 export const userContext = createContext();
 
 
 function App() {
-
   const locomotiveScroll = new LocomotiveScroll();
+  const t = ()=>{
+    if(window.innerWidth > 800)
+      return 'desktop'
+    return 'mobile'
+  }
+  const [type, setType] = useState(t)
+  let {scrollYProgress} = useScroll();
 
-  const [type, setType] = useState('desktop')
 
   useEffect(() => {
 
     const handleResize=()=>{
+    console.log(scrollYProgress);
       if(window.innerWidth > 800){
         setType('desktop')
       }
@@ -28,9 +34,16 @@ function App() {
         setType('mobile')
       }
     };
+    const ppp=()=>{
+      // console.log(scrollYProgress)
+    }
 
+    window.addEventListener("scroll", ppp);
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", ppp);
+    }
   }, []);
 
 
@@ -40,7 +53,11 @@ function App() {
   return (
     <div className='w-full h-full transition-all text-white'>
       <userContext.Provider value={{ type, setType }}>
-        <div id="stars-container" className=' bg-zinc-900 text-white'>
+        <div id="stars-container" className='  text-white'>
+        <motion.div
+        id="progress-bar" className='z-[20]'
+        style={{ scaleX: scrollYProgress }}
+      ></motion.div>
           <div id='stars'></div>
           <div id='stars2'></div>
           <div id='stars3'></div>

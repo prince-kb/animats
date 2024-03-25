@@ -25,7 +25,7 @@ function Eye() {
     })
   return (
     <div >
-        <div data-scroll data-scroll-speed='0' className=" bg-red-800 z-12 flex items-center justify-center h-screen w-full bg-center bg-cover bg-[url('https://ochi.design/wp-content/uploads/2022/05/Top-Viewbbcbv-1-1440x921.jpg')]">
+        <div data-scroll data-scroll-speed='0' className=" bg-red-800 z-12 flex items-center justify-center h-screen w-full bg-center bg-cover bg-[url('https://ochi.design/wp-content/uploads/2022/05/Top-Viewbbcbv-1-1440x921.jpg')] rounded-b-3xl">
             <div data-scroll data-scroll-speed="-.2" data-scroll-section className={`flex absolute ${type === 'mobile' ? 'h-[15vh] w-[32vh]' : 'h-[18vw] w-[38vw]'} gap-[2vw]`}>
                 <div className=" h-full w-1/2 bg-white rounded-full flex justify-center items-center">
                     <div className="h-2/3 w-2/3 relative bg-black rounded-full flex justify-center items-center">

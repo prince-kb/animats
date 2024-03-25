@@ -17,6 +17,7 @@ function LandingPage() {
         <div id='stars'></div>
         <div id='stars2'></div>
         <div id='stars3'></div>
+          
       <div className={`${type === 'mobile' ? 'mt-[30vh]' : 'mt-[20vh]'} px-[4vw]`}>
         {["we create","eye opening","presentations"].map((item,index)=>(
             <div className="masker flex items-center" key={index} > 
