@@ -9,6 +9,8 @@ import LocomotiveScroll from 'locomotive-scroll';
 import Screen3 from './Components/Screen3'
 import './Components/BG/style.css'
 import { motion,  useScroll} from 'framer-motion'
+import { Router } from 'react-router-dom'
+
 export const userContext = createContext();
 
 
@@ -52,6 +54,7 @@ function App() {
   // console.log(size);
   return (
     <div className='w-full h-full transition-all text-white'>
+      <Router>
       <userContext.Provider value={{ type, setType }}>
         <div id="stars-container" className='  text-white'>
         <motion.div
@@ -69,7 +72,7 @@ function App() {
           <Screen3 />
         </div>
       </userContext.Provider>
-
+      </Router>
     </div>
 
   )

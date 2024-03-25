@@ -68,13 +68,13 @@ function Screen3() {
         </div>
         </div>
          : <div className='flex-col items-center'>
-            <motion.div className='relative' onHoverStart={()=>{showAnimIn1(0)}} onHoverEnd={()=>{showAnimOut1(0)}} initial={{}} animate={anims1[0]} transition={{delay : 0,ease : [0.33, 1, 0.68, 1]}}>
+            <motion.div className='relative' onHoverStart={()=>{showAnimIn1(0)}} onHoverEnd={()=>{showAnimOut1(0)}} initial={{opacity : "100%",transform : "scale(1)"}} animate={anims1[0]} transition={{delay : 0,ease : [0.33, 1, 0.68, 1]}}>
                 <a target='_blank' href="https://news-man-one.vercel.app/" className=" flex justify-center">
                     <img src={bg1} alt="nothing" className=' rounded-2xl w-3/4 h-auto my-[2vh]' />
                 </a>
                 <h1 className="font-bold left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2 absolute text-[3vh] text-black " >NewsMan</h1>
             </motion.div>
-            <motion.div className="relative" onHoverStart={()=>{showAnimIn1(1)}} onHoverEnd={()=>{showAnimOut1(1)}} initial={{}} animate={anims1[1]} transition={{delay : 0,ease : [0.33, 1, 0.68, 1]}}>
+            <motion.div className="relative" onHoverStart={()=>{showAnimIn1(1)}} onHoverEnd={()=>{showAnimOut1(1)}} initial={{opacity : "100%",transform : "scale(1)"}} animate={anims1[1]} transition={{delay : 0,ease : [0.33, 1, 0.68, 1]}}>
                 <a target='_blank' href="https://multipurposetextbox.vercel.app/" className=' flex justify-center'>
                 <img src={bg2}  alt="nothing" className=' rounded-2xl w-3/4 h-auto my-[2vh]'/>
                 </a>
