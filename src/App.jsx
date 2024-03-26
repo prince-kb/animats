@@ -9,7 +9,6 @@ import LocomotiveScroll from 'locomotive-scroll';
 import Screen3 from './Components/Screen3'
 import './Components/BG/style.css'
 import { motion,  useScroll} from 'framer-motion'
-import { Router } from 'react-router-dom'
 
 export const userContext = createContext();
 
@@ -28,7 +27,6 @@ function App() {
   useEffect(() => {
 
     const handleResize=()=>{
-    console.log(scrollYProgress);
       if(window.innerWidth > 800){
         setType('desktop')
       }
@@ -36,15 +34,16 @@ function App() {
         setType('mobile')
       }
     };
-    const ppp=()=>{
-      // console.log(scrollYProgress)
-    }
 
-    window.addEventListener("scroll", ppp);
+
+/*     const ppp=()=>{console.log(scrollYProgress)}
+    window.addEventListener("scroll", ppp); */
+
+
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
-      window.removeEventListener("scroll", ppp);
+     /*  window.removeEventListener("scroll", ppp); */
     }
   }, []);
 
@@ -54,11 +53,10 @@ function App() {
   // console.log(size);
   return (
     <div className='w-full h-full transition-all text-white'>
-      <Router>
-      <userContext.Provider value={{ type, setType }}>
+      <userContext.Provider value={{ type }}>
         <div id="stars-container" className='  text-white'>
         <motion.div
-        id="progress-bar" className='z-[20]'
+        id="progress-bar" className='z-[2]'
         style={{ scaleX: scrollYProgress }}
       ></motion.div>
           <div id='stars'></div>
@@ -72,7 +70,6 @@ function App() {
           <Screen3 />
         </div>
       </userContext.Provider>
-      </Router>
     </div>
 
   )

@@ -6,14 +6,10 @@ import { RouterProvider, createBrowserRouter,useParams } from 'react-router-dom'
 import About from './Components/About.jsx'
 import Projects from './Components/Projects.jsx'
 import Contact from './Components/Contact.jsx'
-import Params from './Components/Params.jsx'
+// import Params from './Components/Params.jsx'
 
 
-let { id } = useParams();
-function ProfilePage() {
-  // Get the userId param from the URL.
-  // ...
-}
+
 
 const router = createBrowserRouter([
   {
@@ -36,10 +32,10 @@ const router = createBrowserRouter([
         path : "contact",
         element : <Contact/>
       },
-      {
-        path : ":id",
-        element : <Params/>
-      },
+      // {
+      //   path : ":id",
+      //   element : <Params/>
+      // },
     ]
   }
 ])

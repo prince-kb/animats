@@ -6,7 +6,7 @@ function Screen2() {
   const p = useContext(userContext)
   let {type} =p;
   return (
-    <div data-scroll data-scroll-speed="0.1" data-scroll-section className="z-15 bg-zinc-800">
+    <div data-scroll data-scroll-speed="0.1" data-scroll-section className="z-[2] bg-zinc-800">
           {/* SLIDING TEXT */}
           <div className='w-full bg-zinc-800 ' >
       <div className="bg-[#004d43] pt-10 pb-10 rounded-t-[5vh]">
@@ -16,7 +16,7 @@ function Screen2() {
         </div>
       </div>
     </div>
-      <div className='border bg-[#cdea68] py-8  h-full px-6 z-10'>
+      <div className='border bg-[#cdea68] py-8  h-full px-6 z-[2]'>
         <h1 className=" leading-[7vw] pb-10 text-black text-[5vw] my-4 mb-8 border-b-2 border-zinc-700 tracking-tighter font-bold font-['Cavolini']">Here, we are growing securely keeping in mind that our aim is to develop something which is not yet developed, but has to be till now. </h1>
         <div className={`mx-4 ${type === 'mobile' ? 'flex-col' : 'flex'}`}>
           <div className="flex-col items-center justify-center mx-[2vw]">

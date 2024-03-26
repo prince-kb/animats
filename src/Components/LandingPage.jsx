@@ -12,7 +12,7 @@ function LandingPage() {
       // console.log(window.innerWidth)
   })
   return (
-    <div data-scroll data-scroll-speed="-.3" data-scroll-section className=' w-full h-screen bg-zinc-800 pt-2 z-8'>
+    <div data-scroll data-scroll-speed="-.3" data-scroll-section className=' w-full h-screen bg-zinc-800 pt-2 z-[2]'>
           <div id="stars-container " className='w-full h-screen'>
         <div id='stars'></div>
         <div id='stars2'></div>

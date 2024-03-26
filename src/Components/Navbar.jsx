@@ -24,7 +24,7 @@ function Navbar() {
     <>
       {
         <motion.div initial={{}} animate={{}} style={scrollDirection === "down" ? styles.active: styles.hidden}
-          className='w-full px-[1vw] py-[2vh] flex justify-between items-center fixed z-[4] font-[arial]'
+          className='w-full px-[1vw] py-[2vh] flex justify-between items-center fixed z-[2] font-[arial]'
         >
           <div className="logo">
             <img src={image} alt="Nothing" className={` ${type === 'desktop' ? 'h-24' : 'h-16 '} w-auto m-[2vh]`} />
