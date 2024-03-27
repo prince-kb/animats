@@ -3,7 +3,7 @@ import bg1 from '../assets/images/newsman.png';
 import bg2 from '../assets/images/textbox.png';
 import { userContext } from '../App';
 import {motion,useAnimation,useInView } from 'framer-motion';
-import './BG/style.css'
+import '../Styles/style1.css'
 function Screen3() {
     const n = useContext(userContext)
     let {type} = n;
@@ -24,20 +24,20 @@ function Screen3() {
 
 
     
-    const h = 'bg-gradient-to-b from-orange-500 via-amber-400 to-orange-600 bg-clip-text text-transparent';
+    const textColor = 'bg-gradient-to-b from-orange-500 via-amber-400 to-orange-600 bg-clip-text text-transparent';
 
     const ref = useRef();
     let p = useInView(ref);
 
   return (
-    <div data-scroll data-scroll-speed='0.2' className={``}>
+    <div data-scroll data-scroll-speed='0.2' className={`mb-[10vh]`}>
          
          <div id="stars-container" className='mb-[5vh]'>
           <div id='stars'></div>
           <div id='stars2'></div>
           <div id='stars3'></div>
           <div ref={ref} className="overflow-hidden">
-         {p && <motion.h1 initial={{y : "100%"}} animate={{y : "0"}} transition={{delay : 0.5 ,ease : [0.33, 1, 0.68, 1]}} className={`text-[4vh] font-[arial] text-center mt-[8vh] `}>PROJECTS</motion.h1>}
+         {p && <motion.h1 initial={{y : "100%"}} animate={{y : "0"}} transition={{delay : 0.5 ,ease : [0.33, 1, 0.68, 1]}} className={`${type==='mobile' ? 'text-[4vh] ' : ' text-[4vw]'} font-[arial] text-center mt-[8vh] `}>PROJECTS</motion.h1>}
         </div>
         { type === 'desktop' ? <div className={`text-white flex w-full  py-[2vh] `}> 
             <div className='px-6 pr-3 w-1/2 h-full '>
@@ -46,7 +46,7 @@ function Screen3() {
                     <div className='translate-x-[25vw] overflow-hidden text-[5vw] font-semibold  font-["Cavolini"] absolute '>
                     <h1 className='tracking-tighter inline-block '>{
                         "NEWSMAN".split("").map((item,index)=>(
-                            <motion.span key={index} className={` ${h} inline-block`} initial={{y : "100%"}} animate={anims[0]} transition={{delay : .05*index,ease : [0.33, 1, 0.68, 1]}} >{item}</motion.span>
+                            <motion.span key={index} className={` ${textColor} inline-block`} initial={{y : "100%"}} animate={anims[0]} transition={{delay : .05*index,ease : [0.33, 1, 0.68, 1]}} >{item}</motion.span>
                         ))
                     }</h1>
                 </div>
@@ -60,7 +60,7 @@ function Screen3() {
                 <div className='-translate-x-[25vw] overflow-hidden text-[5vw] font-semibold  font-["Cavolini"] absolute '>
                     <h1  className=' inline-block'>{
                         "TEXTBOX".split("").map((item,index)=>(
-                            <motion.span key={index} className={` ${h} inline-block`} initial={{y : "100%"}} animate={anims[1]} transition={{delay : .05*index,ease : [0.33, 1, 0.68, 1]}}>{item}</motion.span>
+                            <motion.span key={index} className={` ${textColor} inline-block`} initial={{y : "100%"}} animate={anims[1]} transition={{delay : .05*index,ease : [0.33, 1, 0.68, 1]}}>{item}</motion.span>
                         ))
                     }</h1>
                 </div>

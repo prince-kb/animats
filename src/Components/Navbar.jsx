@@ -1,8 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react'
 import { userContext } from '../App';
 import image from '../assets/images/crown.png';
-import './BG/style.css'
-import { scrolll } from './hooks/scroll';
+import { scrolll } from '../Hooks/scroll';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 function Navbar() {
@@ -30,10 +29,16 @@ function Navbar() {
             <img src={image} alt="Nothing" className={` ${type === 'desktop' ? 'h-24' : 'h-16 '} w-auto m-[2vh]`} />
           </div>
           <div className="links flex gap-[3vw] mr-1">
-            {["Home", "About", "Projects", "Contact"].map((item, index) => (
+            {/* {["Home", "About", "Projects", "Contact"].map((item, index) => (
               <Link key={index} to={item} className={`${type === 'mobile' ? 'text-[2vh]' : 'text-[2vw]'} capitalize ${index === 3 && "ml-[4vw]"} `} >{item}</Link>
-            ))}
-          </div>
+            ))} */}
+            <Link to = '/' className={`font-rubik ${type === 'mobile' ? 'text-[2vh]' : 'text-[2vw]'}` }>HOME</Link>   
+            <Link to = '/about' className={`font-rubik ${type === 'mobile' ? 'text-[2vh]' : 'text-[2vw]'}` }>ABOUT</Link>   
+            <Link to = '/projects' className={`font-rubik ml-[4vw] ${type === 'mobile' ? 'text-[2vh]' : 'text-[2vw]'}` }>PROJECTS</Link>   
+            <Link to = '/contact' className={`font-rubik ${type === 'mobile' ? 'text-[2vh]' : 'text-[2vw]'}` }>CONTACT</Link>   
+
+                   </div>
+
           {/* <hr/> */}
 
         </motion.div>}

@@ -7,7 +7,7 @@ import Eye from './Components/Eye'
 
 import LocomotiveScroll from 'locomotive-scroll';
 import Screen3 from './Components/Screen3'
-import './Components/BG/style.css'
+import './Styles/style1.css'
 import { motion,  useScroll} from 'framer-motion'
 
 export const userContext = createContext();
@@ -52,7 +52,7 @@ function App() {
   // const size = useWindowSize();
   // console.log(size);
   return (
-    <div className='w-full h-full transition-all text-white'>
+    <div className='w-full h-full transition-all text-white font-rubik'>
       <userContext.Provider value={{ type }}>
         <div id="stars-container" className='  text-white'>
         <motion.div
